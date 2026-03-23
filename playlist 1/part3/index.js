@@ -1,9 +1,12 @@
 // console.log("test")
 
 import express from "express"
+import connectDB from "./config/db.js"
+import "dotenv/config"
 import { userSchema } from "./schema/index.js"
 
 const app = express()
+connectDB()
 
 // app.use(cors())
 app.use(express.json())
